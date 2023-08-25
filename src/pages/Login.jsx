@@ -5,12 +5,12 @@ import Axios from 'axios'
 import Form from '../components/Form'
 
 const Login = () => {
-    if (window.localStorage.getItem('userID') || window.localStorage.getItem('username')) return <Navigate to={'/'}/>;
-    const [username, setUsername] = useState("")
-    const [password, setPassword] = useState("")
-    const [_,setCookies] = useCookies(['access_token'])
-    const navigate = useNavigate()
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const [_,setCookies] = useCookies(['access_token']);
+    const navigate = useNavigate();
     const API = import.meta.env.VITE_SERVER_URL;
+    if (window.localStorage.getItem('userID') || window.localStorage.getItem('username')) return <Navigate to={'/'}/>;
 
     const onSubmit = async e => {
         e.preventDefault(); 

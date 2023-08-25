@@ -1,7 +1,7 @@
 import { useState, useEffect} from 'react';
 import Axios from 'axios'
 import {useCookies} from 'react-cookie'
-import {useParams, useNavigate, Navigate} from 'react-router-dom'
+import {useParams, useNavigate} from 'react-router-dom'
 
 const Profile = () => {
     const [_,setCookies] = useCookies(['access_token']);

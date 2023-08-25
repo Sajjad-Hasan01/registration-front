@@ -10,10 +10,11 @@ const Register = () => {
     const [password, setPassword] = useState("")
     const [_,setCookies] = useCookies(['access_token'])
     const navigate = useNavigate()
-    
+    const API = import.meta.env.VITE_SERVER_URL;
+
     const onSubmit = async e => {
         e.preventDefault(); 
-        const response = await Axios.post(`${import.meta.env.SERVER_URL}/register`, {username, password})
+        const response = await Axios.post(`${API}/register`, {username, password})
         
         if (response.data.token && response.data.userId && response.data.username) {
             setCookies('access_token', response.data.token)

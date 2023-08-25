@@ -1,0 +1,10 @@
+#root {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding: 2rem;
+  text-align: center;
+}
+.form-login{
+  display: flex;
+  flex-direction: column;
+}
